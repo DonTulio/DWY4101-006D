@@ -1,0 +1,30 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: content-box;
+}
+
+header{
+    display:inline-block;
+    border: 5px solid cyan;
+    font-size: 2rem;
+}
+
+.color-azul{
+    color: blue;
+}
+.margin-de-10px{
+    margin: 10px;
+}
+.flex > article{
+    flex-grow: 1;
+    flex: 0 0 8.33333%;
+    border: 1px solid black;
+}
+.flex{
+    display:flex;
+    justify-content: stretch;
+}
+.wrap{
+    display:wrap;
+}

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Mi primera vez con JS</title>
+        <style>
+            *{
+                margin: 0px;
+                padding: 0px;
+                box-sizing: border-box;
+            }
+            form{
+                width: 80%;
+                display: block;
+                margin: 0 auto;
+            }
+            form div{
+                display: block;
+            }
+            input, select{
+                display: block;
+                width: 100%;
+                outline: none;
+                border-width: 2px;
+                border-radius: 15px;
+                padding: 0px 15px 0px 15px;
+                height: 30px;
+            }
+            table{
+                display: block;
+                width: 100%;
+                margin: 15 auto;
+            }
+        </style>
+    </head>
+    <body class="cuerpo">
+        <form onsubmit="">
+            <div>
+                <label for="">Nombre y apellido</label>
+                <input type="text" name="nombre" placeholder="ingrese nombre" >
+            </div>
+            <div>
+                <label for="">edad</label>
+                <input type="number" name="edad" placeholder="ingrese edad" >
+            </div>
+            <div>
+                <label for="">fecha nacimiento</label>
+                <input type="date" name="fecha" >
+            </div>
+            <div>
+                <label for="">Seleccione genero</label>
+                <select name="genero">
+                    <option value="masculino">Hombre</option>
+                    <option value="femenino">Mujer</option>
+                </select>
+            </div>
+            <div>
+                <input type="submit" value="ingresar">
+            </div>
+        </form>
+       <table>
+           <thead>
+                <tr>
+                    <th>Nombre</th>
+                    <th>Apellido</th>
+                    <th>Fecha</th>
+                    <th>Genero</th>
+                </tr>
+           </thead>
+           <tbody>
+           </tbody>
+       </table>
+       
+        <script>
+            // // sincrono, que no espera, y hace todo al mismo tiempo
+            // // Las variables
+            // var nombre = "valor";
+            // if(1 == 1){
+            //     var variableIf = "Hola";
+            // }
+            // console.log(nombre);
+            // console.log(variableIf);
+            // // Variables scope
+            // // let const
+            // let nombreLet = "valor";
+            // if( 1 == 1){
+            //     let variableLetIF = "2HOla";
+
+            // }
+            // console.log(nombreLet);
+            // // console.log(variableLetIF);
+            // const soyConst = "Hola soy Const";
+            // soyConst = "Adios soy const";
+            // console.log(soyConst);
+        </script>
+        <script>
+            // console.log("Hola, soy un script y estoy de manera global XD");
+            // console.log("Las variables anteriores son soyConst", soyConst);
+        </script>
+        <script src="./asset/js/js.js">
+        </script>
+    </body>
+</html>

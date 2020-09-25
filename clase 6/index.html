@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Validaciones basicas</title>
+        <link rel="stylesheet" href="./asset/css/style.css">
+    </head>
+    <body>
+        <form >
+            <div>
+                <label for="">Ingrese su nombre</label>
+                <input 
+                type="text" 
+                name="nombre"
+                required
+                maxlength="10"
+                >
+            </div>
+            <div>
+                <label for="">Ingrese su contraseña</label>
+                <input 
+                type="password"
+                name="password"
+                required
+                >
+            </div>
+            <div>
+                <label for="">Ingrese su edad</label>
+                <input 
+                type="number"
+                name="edad"
+                required
+                max="21"
+                >
+            </div>
+            <div>
+                <input type="submit">
+            </div>
+        </form>
+        <script src="./asset/js/js.js"></script>
+    </body>
+</html>
