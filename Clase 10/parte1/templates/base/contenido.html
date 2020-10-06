@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ titulo }}</title>
+    {% include "base/header.html" %}
+    {% block header %}
+
+    {% endblock %}
+</head>
+<body>
+    {% block contenido %}
+        <h1>Si vez esto, algo fallo...</h1>
+    {% endblock %}
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    {% block script %}
+    
+    {% endblock %}
+</body>
+</html>
+    
