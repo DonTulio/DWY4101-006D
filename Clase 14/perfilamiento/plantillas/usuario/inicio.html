@@ -1,0 +1,29 @@
+{% extends "base/index.html" %}
+{% block main %}
+<div class="row">
+    <section class="card col-sm-12 col-md-4 mx-auto mt-5">
+        <article class="card-header">
+            <h2>Iniciar sesión</h2>
+        </article>
+        <form action="" method="POST">
+            {% csrf_token %}
+            <article class="card-body">
+                {% for campo in formulario %}
+                    <div class="form-group">
+                        <label for="{{ campo.id_for_label }}">{{ campo.label }}</label>
+                        {{ campo }}
+                        {% if campo.errors %}
+                            {% for  error in campo.errors  %}
+                            <small id="{{ campo.id_for_label }}" class="form-text text-muted">{{ error }}</small>
+                            {% endfor %}
+                        {% endif %}
+                    </div>
+                {% endfor %}
+            </article>
+            <article class="card-footer">
+                <input type="submit" class="btn btn-info btn-block" value="Entrar">
+            </article>
+        </form>
+    </section>
+</div>
+{% endblock main%}
