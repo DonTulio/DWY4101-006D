@@ -7,6 +7,8 @@ from .models import Genero,PerfilUser
 from django.contrib.auth.models import User
 from django.contrib import messages
 from apps.fotos.models import Foto
+from django.contrib.auth.decorators import login_required
+
 # Create your views here.
 def registro(request):
     formulario = FormCreacionUsuario()
@@ -63,7 +65,8 @@ def iniciar(request):
 def salir(request):
     logout(request)
     return redirect('/')
-
+    
+@login_required
 def perfil(request):
     fotos = Foto.objects.all()
     context = {

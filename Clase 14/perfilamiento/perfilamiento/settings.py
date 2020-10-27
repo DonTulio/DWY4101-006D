@@ -132,3 +132,5 @@ STATICFILES_DIRS = [join(BASE_DIR,'static')]
 # Configuración para media
 MEDIA_URL = '/media/'
 MEDIA_ROOT = join(BASE_DIR,'media')
+## configuración de rutas login.
+LOGIN_URL = '/'
