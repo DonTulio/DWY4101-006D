@@ -1,0 +1,67 @@
+{% extends 'base/index.html' %}
+{% load static %}
+{% block main %}
+<div class="row">
+    <div  class="col-md-4 mt-5">
+        <button id="btnBorrar" class="btn btn-danger btn-block"> Borrar Todo</button>
+    </div>
+</div>
+<section class="row mt-5">
+
+    <article class="col-md-8">
+        <div class="table-responsive">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Titulo</th>
+                        <th>Fecha</th>
+                        <th>Estado</th>
+                        <th>Acción</th>
+                    </tr>
+                </thead>
+                <tbody> 
+                    <!-- Aquí van los comentarios del a base de datos D: -->
+                    <tr></tr>
+                </tbody>
+            </table>
+        </div>
+    </article>
+    <article class="col-md-4">
+        <div class="card">
+            <div class="card-header">
+                <h2 class="card-title">Agregar nuevo comentario</h2>
+            </div>
+            <form action="">
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="form-group">
+                                <label for="titulo">Ingrese un titulo</label>
+                                <input name="titulo" id="titulo" class="form-control" required maxlength="45" type="text">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="form-group">
+                                <label for="comentario">Ingrese su comentario</label>
+                                <textarea name="comentario" class="form-control" required id="comentario" cols="30" rows="10"></textarea>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-footer">
+                    <input type="submit" value="Guardar" class="btn btn-success btn-block">
+                </div>
+            </form>
+        </div>
+    </article>
+</section>
+
+{% endblock main %}
+
+{% block script %}
+<script src="{% static 'js/js.js' %}">
+
+</script>
+{% endblock script %}
