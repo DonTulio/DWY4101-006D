@@ -141,8 +141,8 @@ LOGOUT_URL = 'salir'
 LOGOUT_REDIRECT_URL  = 'ingreso'
 
 ## Configuración para conectarse a la API de FB :D
-SOCIAL_AUTH_FACEBOOK_KEY = '431747547834166'
-SOCIAL_AUTH_FACEBOOK_SECRET = '43fd88d110da94ed1e644d0bbe5fc171'
+SOCIAL_AUTH_FACEBOOK_KEY = '' # aquí su codigo de app
+SOCIAL_AUTH_FACEBOOK_SECRET = '' # aquí su secret :S
 SOCIAL_AUTH_FACEBOOK_SCOPE = ['email','user_link']
 SOCIAL_AUTH_FACEBOOK_PROFILE_EXTRA_PARAMS = {
     'fields': 'id,name,email,picture,link'
