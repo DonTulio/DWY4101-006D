@@ -1,0 +1,14 @@
+{% extends 'base/index.html' %}
+{% block titulo %}
+Bienvenido {{ user.first_name }}
+{% endblock titulo %}
+
+{% block main %}
+    {{ user.first_name }}
+    {% if backends.associated %}
+        {% for bkn in backends.associated %}
+            {% if bkn.provider == 'facebook' %}
+            {% endif %}
+        {% endfor %}
+    {% endif %}
+{% endblock main %}

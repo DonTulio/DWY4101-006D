@@ -1,0 +1,17 @@
+{% extends 'base/index.html' %}
+{% block titulo %}
+Iniciar sesión :D
+{% endblock titulo %}
+
+{% block main %}
+<div class="row mt-5">
+    <div class="col-md-6 mx-auto">
+        <section class="jumbotron">
+            <h1 class="display-4">Bienvenido</h1>
+            <p class="lead">Eliga su red social para iniciar su sesión :D</p>
+            <hr class="my-4">
+            <a href="{% url 'social:begin' 'facebook' %}" class="btn btn-block btn-info">Facebook</a>
+          </section>
+    </div>
+</div>
+{% endblock main %}
