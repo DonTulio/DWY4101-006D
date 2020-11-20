@@ -4,10 +4,13 @@ Bienvenido {{ user.first_name }}
 {% endblock titulo %}
 
 {% block main %}
-    {{ user.first_name }}
+{{ backends }}
     {% if backends.associated %}
         {% for bkn in backends.associated %}
             {% if bkn.provider == 'facebook' %}
+            {{ bkn }}
+            {{ bkn.extra_data.name }} {{ bkn.extra_data.email }}
+            <img src="{{ bkn.extra_data.picture.data.url }}" alt="">
             {% endif %}
         {% endfor %}
     {% endif %}

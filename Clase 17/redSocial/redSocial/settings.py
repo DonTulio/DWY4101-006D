@@ -37,7 +37,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'social_django'
+    'social_django',
+    'pwa'
 ]
 
 MIDDLEWARE = [
@@ -141,9 +142,17 @@ LOGOUT_URL = 'salir'
 LOGOUT_REDIRECT_URL  = 'ingreso'
 
 ## Configuración para conectarse a la API de FB :D
-SOCIAL_AUTH_FACEBOOK_KEY = '' # aquí su codigo de app
-SOCIAL_AUTH_FACEBOOK_SECRET = '' # aquí su secret :S
+SOCIAL_AUTH_FACEBOOK_KEY = '1013883765746174' # aquí su codigo de app
+SOCIAL_AUTH_FACEBOOK_SECRET = '037b6f15b5bd10ae41a9e52669f5c860' # aquí su secret :S
 SOCIAL_AUTH_FACEBOOK_SCOPE = ['email','user_link']
 SOCIAL_AUTH_FACEBOOK_PROFILE_EXTRA_PARAMS = {
     'fields': 'id,name,email,picture,link'
 }
+SOCIAL_AUTH_FACEBOOK_EXTRA_DATA = [
+    ('name','name'),
+    ('email','email'),
+    ('picture','picture'),
+    ('link','user_link')
+]
+## Carga de archivo SW
+PWA_SERVICE_WORKER_PATH = join(BASE_DIR,'assets','sw','serviceworker.js')

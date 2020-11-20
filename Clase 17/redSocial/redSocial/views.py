@@ -6,7 +6,7 @@ def ingreso(request):
         'ingreso/index.html'
     )
 
-@login_required
+
 def perfil(request):
     return render(
         request,

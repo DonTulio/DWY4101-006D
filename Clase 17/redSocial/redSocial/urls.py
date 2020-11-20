@@ -23,5 +23,6 @@ urlpatterns = [
     path('',ingreso, name='ingreso'),
     path('perfil/',perfil,name='perfil'),
     path('salir/',LogoutView.as_view(), name='salir'),
-    path('social/',include('social_django.urls', namespace='social')) # social:url
+    path('social/',include('social_django.urls', namespace='social')), # social:url
+    path('',include('pwa.urls'))
 ]
